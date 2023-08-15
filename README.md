@@ -207,6 +207,21 @@ rhc_insights:
 ```
 
 ```yaml
+rhc_insights:
+  display_name: ""
+```
+
+The system name to be displayed in the Insights systems inventory.
+
+```yaml
+rhc_insights:
+  ansible_host: ""
+```
+
+The hostname to be used in the Insights inventory for remediations.
+
+
+```yaml
     rhc_proxy: {}
 ```
 
