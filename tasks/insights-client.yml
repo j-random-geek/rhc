@@ -51,12 +51,12 @@
   lineinfile:
     path: "{{ __rhc_insights_conf }}"
     regexp: "^ansible_host"
-    insertafter: "#display_name"
-    line: display_name={{ rhc_insights.ansible_host | d(inventory_hostname) }}
+    insertafter: "#ansible_host"
+    line: ansible_host={{ rhc_insights.ansible_host }}
   register: __insights_ansible_host_added
   when:
     - rhc_insights.ansible_host is defined
-    - rhc_insights.ansible_host | d('inventory_hostname') | length > 0
+    - rhc_insights.ansible_host | d('') | length > 0
 
 - name: Register insights-client
   shell: insights-client --register & wait
