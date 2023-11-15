@@ -1,5 +1,7 @@
 # rhc
 
+[![ansible-lint.yml](https://github.com/linux-system-roles/rhc/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/linux-system-roles/rhc/actions/workflows/ansible-lint.yml) [![ansible-test.yml](https://github.com/linux-system-roles/rhc/actions/workflows/ansible-test.yml/badge.svg)](https://github.com/linux-system-roles/rhc/actions/workflows/ansible-test.yml) [![markdownlint.yml](https://github.com/linux-system-roles/rhc/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/linux-system-roles/rhc/actions/workflows/markdownlint.yml) [![woke.yml](https://github.com/linux-system-roles/rhc/actions/workflows/woke.yml/badge.svg)](https://github.com/linux-system-roles/rhc/actions/workflows/woke.yml)
+
 ![rhc](https://github.com/linux-system-roles/template/workflows/tox/badge.svg)
 
 An ansible role which connects RHEL systems to Red Hat.
@@ -20,16 +22,12 @@ default).
 
 ### Collection requirements
 
-The role requires modules from `community.general`.  If you are using
-`ansible-core`, you must install the `community.general` collection.  Use the
-file `meta/collection-requirements.yml` to install it:
+The role requires modules from external collections.  Use the following command
+to install them:
 
 ```bash
 ansible-galaxy collection install -vv -r meta/collection-requirements.yml
 ```
-
-If you are using Ansible Engine 2.9, or are using an Ansible bundle which
-includes these collections/modules, you should have to do nothing.
 
 ## Role Variables
 
